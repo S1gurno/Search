@@ -14,17 +14,17 @@ function submitRequest(event) {
     console.log(select.value);
     let params;
 
-    if (select.value === "google") {
+    if (select.value === "google" || select.value === "bing") {
         params = `search?q=${input.value}`;
-        window.location.replace("https://www.google.com/");
-        window.location.href = `https://www.google.com/search?q=${input.value}`;
     }
     else if (select.value === "yandex"){ 
-        window.location.replace()
         params = `search/?text=${input.value}`;
     }
+    else if (select.value === "duckduckgo"){
+        params = `?va=u&t=he&q=${input.value}&ia=web`
+    }
 
-    window.location.href = `https://www.${select.value}.com/${params}}`;
+    window.location.href = `https://www.${select.value}.com/${params}`;
 }
 
 // ДЗ: Запрограммировать чтоб работало. 
